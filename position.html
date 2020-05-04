@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Postion</title>
+	<link rel="stylesheet" type="text/css" href="position.css">
+ <script src="https://kit.fontawesome.com/525d3a0fd1.js" crossorigin="anonymous"></script>
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+<style>
+  @font-face {
+    font-family: "FontAwesome";
+    src: url("fonts/fontawesome-webfont.eot");
+    src: url("fonts/fontawesome-webfont.eot?#iefix") format("eot"), 
+       url("fonts/fontawesome-webfont.woff") format("woff"), 
+       url("fonts/fontawesome-webfont.ttf") format("truetype"), 
+       url("fonts/fontawesome-webfont.svg#FontAwesome") format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+.jp-title {
+    font-size: 12px;
+    text-align: center;
+    color: #999;
+}
+
+.jp-title ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.jp-gui {
+  position: relative;
+  background: #f34927;
+  background: -moz-linear-gradient(top,  #f34927 0%, #dd3311 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f34927), color-stop(100%,#dd3311));
+  background: -webkit-linear-gradient(top,  #f34927 0%,#dd3311 100%);
+  background: -o-linear-gradient(top,  #f34927 0%,#dd3311 100%);
+  background: -ms-linear-gradient(top,  #f34927 0%,#dd3311 100%);
+  background: linear-gradient(to bottom,  #f34927 0%,#dd3311 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f34927', endColorstr='#dd3311',GradientType=0 );
+  -webkit-box-shadow:  0px 1px 1px 0px rgba(0, 0, 0, .1);    
+    box-shadow:  0px 1px 1px 0px rgba(0, 0, 0, .1);
+    border-radius: 3px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.jp-jplayer, .jp-audio {
+    width: 420px;
+    margin: 50px auto;
+}
+
+.jp-controls {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: "FontAwesome";
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+}
+
+.jp-controls li {
+    display: inline;
+}
+
+.jp-controls a {
+    color: #fff;
+}
+
+.jp-play,.jp-pause {
+    width: 60px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+    line-height: 43px;
+    border-right: 1px solid #d22f0f;
+}
+
+.jp-controls .jp-play:hover,.jp-controls .jp-pause:hover {
+    background-color: #de3918;
+}
+
+.jp-mute,.jp-unmute {
+    position: absolute;
+    right: 55px;
+    top: 0;
+    width: 20px;
+    height: 40px;
+    display: inline-block;
+    line-height: 46px;
+}
+
+.jp-mute {
+    text-align: left;
+}
+
+.jp-volume-bar {
+    position: absolute;
+    right: 10px;
+    top: 17px;
+    width: 45px;
+    height: 8px;
+    border-radius: 20px 20px 20px 20px;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1) inset;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1) inset;
+    background-color: #992E18;
+    overflow: hidden;
+}
+
+.jp-volume-bar-value {
+    background-color: #fff;
+    height: 8px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.jp-progress {
+    background-color: #992E18;
+    border-radius: 20px 20px 20px 20px;
+    overflow: hidden;
+    position: absolute;
+    right: 133px;
+    top: 15px;
+    width: 210px;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2) inset;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2) inset;
+}
+
+.jp-play-bar {
+    height: 12px;
+    background-color: #fff;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.jp-time-holder {
+    color: #FFF;
+    font-size: 12px;
+    line-height: 14px;
+    position: absolute;
+    right: 90px;
+    top: 14px;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+}
+
+</style>
+
+
+<script>
+  $(document).ready(function(){
+      $("#jquery_jplayer_1").jPlayer({
+        ready: function () {
+          $(this).jPlayer("setMedia", {
+            mp3: "audio/joker-lai-lai-lai.mp3",
+            mp3: "audio/joker-kina-get-you-the-moon.mp3",
+            oga: "audio/file_example_OOG_5MG.ogg"
+          });
+        },
+        swfPath: "/js",
+        supplied: "mp3,oga"
+      });
+    });
+</script>
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+
+<!-- Main Header -->
+<div id= "div1" >
+
+	<ul class="horizontal-list">
+
+		<li id="header-logo"></li>
+		<li id="header-title" style="text-align: center;"> <p class="title" style="margin: 0px">Shashi</p> <p class="title" style="margin: 0px">Studio</p></li>
+		<li id="Favorites"><p class="title">Favorites</p></li>
+		<li id="header-search" >
+			
+		<li id="notification"><i class="far fa-bell boder_img" style="color: white; font-size: 30px;margin-top: 15px"></i></li>
+		<li id="profile-logo"></li>
+
+		
+</ul>
+
+ </div>
+
+
+ <!-- First Main Section-->
+
+<div id="main-section">
+<div id="div2" >
+
+ <img id="main-cover" class="boder_img"src="https://i.pinimg.com/originals/1d/03/20/1d03203298cb2f4771cd2082a79591b4.jpg">
+ </div>
+
+ <!-- Image Section To be Attached -->
+<div id="div3">
+<img id="main_logo" class="boder_img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTGEN9Y1XaMlcZpMaNiSm5N9MPpI96Jg_vAXPhY8X-2hngzx2he&usqp=CAU">
+ </div>
+
+
+ <!-- Latest Release Section -->
+
+
+<div id="Latest-Release">
+  <p class="title"> Latest Release</p>
+  <div style="margin-bottom: 20px">
+  <ul class="horizontal-list zoomin">
+
+  	<li id="song_info">
+
+
+      <div id="song_img">
+       <img id="img_01" class="boder_img"src="https://c.ndtvimg.com/pt5oiml8_loveratri-youtube_625x300_30_August_18.jpg" >
+      </div>
+
+      <div id="song-name">
+         <p id="name"> Tera Hua</p>
+         <p id="date"> Aug 21 2019</p>
+      </div>
+
+      <div id="song-duration">
+     	<i style="margin:20px 0px 10px 10px; color: white;"class="fas fa-ellipsis-h"></i>
+
+      		
+
+           
+      	<p  id="duration">5:40</p>
+      </div>
+
+  	 </li>
+  	<li id="song_info">
+
+       <div id="song_img">
+        <img id="img_01" class="boder_img"src="https://www.hindustantimes.com/rf/image_size_960x540/HT/p2/2017/04/18/Pictures/latest-kapoor-girlfriend-shraddha-kapoor-chahunga-still_710f15dc-23fe-11e7-929a-64902ca55664.jpg" >
+    </div>
+
+      <div id="song-name">
+          <p id="name">Phir Bhi</p>
+         <p id="date"> Aug 21 2019</p>
+      </div>
+
+      <div id="song-duration">
+      	<i style="margin:20px 0px 10px 10px; color: white;"class="fas fa-ellipsis-h"></i>
+      	<p  id="duration">5:40</p>
+      </div>
+  	 </li>
+
+  </ul>
+</div>
+
+<div>
+  
+  <ul class="horizontal-list  zoomin">
+
+  	<li id="song_info">
+       <div id="song_img">
+          <img id="img_01" class="boder_img"src="https://timesofindia.indiatimes.com/thumb/msid-71044192,width-800,height-600,resizemode-4/71044192.jpg" >
+      </div>
+
+      <div id="song-name">
+      	 <p id="name"> Pal</p>
+         <p id="date"> Aug 21 2019</p>
+      </div>
+
+      <div id="song-duration">
+      	<i style="margin:20px 0px 10px 10px; color: white;"class="fas fa-ellipsis-h"></i>
+      	<p  id="duration">5:40</p>
+      </div>
+       </li>
+  	<li id="song_info">
+        <div id="song_img">
+         <img id="img_01" class="boder_img"src="https://www.filmibeat.com/img/2018/03/baaghi1-1520519124.jpg" >
+      </div>
+
+      <div id="song-name">
+      	 <p id="name">O sathi>
+         <p id="date"> Aug 21 2019</p>
+      </div>
+
+      <div id="song-duration">
+      	<i style="margin:20px 0px 10px 10px; color: white;"class="fas fa-ellipsis-h"></i>
+      	<p  id="duration">5:40</p>
+      </div>
+  	 </li>
+
+  </ul>
+</div>
+
+
+ </div>
+
+
+ <!-- Popular Artiest Section -->
+<div id="div5" >
+
+	<p class="title">Popular Artist</p>
+<ul class="horizontal-list zoomin">
+
+	 <a href="musicplayer.html " style="text-decoration: none;color: white"><li id="artist_img" >
+	 	
+	 	<img class="boder-img zoomin"src="https://hindish.com/wp-content/uploads/2017/05/arijit-singh-feature.jpg">
+
+	 </li></a>
+	 <a href="musicplayer.html " style="text-decoration: none;color: white"><li id="artist_img"  >
+	 	<img class="boder-img "src="https://www.rockandpop.cl/wp-content/uploads/2018/11/1481536340_152263_1481536622_noticia_normal-400x360.jpg">
+	 </li></a>
+	 <a href="musicplayer.html " style="text-decoration: none;color: white"><li id="artist_img" >
+		     
+      	 	<img class="boder-img "src="https://m.media-amazon.com/images/M/MV5BODE2NDJjNWQtMzkxYi00OTVjLTk2MTktMjk1NWVhN2VjNWE1XkEyXkFqcGdeQXVyMTExNDQ2MTI@._V1_SY1000_CR0,0,726,1000_AL_.jpg">
+
+	</li> </a>
+	 <a href="musicplayer.html " style="text-decoration: none;color: white"><li id="artist_img" >
+		    
+ 	 	<img class="boder-img "src="https://smedia2.intoday.in/aajtak/images/stories/012015/ankit_tiwari_650_011115062507.jpg">
+
+	</li></a>
+	 <a href="musicplayer.html " style="text-decoration: none;color: white"><li id="artist_img">
+			 	<img class="boder-img "src="http://content.hungama.com/artist/profile%20image/300x300%20jpeg/5978395998.jpg">
+    
+
+	</li></a>
+
+	 <a href="musicplayer.html " style="text-decoration: none;color: white"><li id="artist_img">
+		    
+	 	<img class="boder-img "src="https://pbs.twimg.com/profile_images/1063395785314836480/2Opw3f5G_400x400.jpg">
+
+	</li></a>
+
+
+</ul>
+
+<!-- Name of Artiest Section -->
+
+<ul class="horizontal-list s" style="width:100%;height: 30px">
+	<li style="height: 100%;width: 15%"> <p class="artiest-name">Arjeet Singh </p></li>
+	<li style="height: 100%;width: 15%"> <p class="artiest-name"> 
+       ColdPlay </p></li>
+	<li style="height: 100%;width: 15%"> <p class="artiest-name">	Sunidhi Chauhan </p></li>
+	<li style="height: 100%;width: 15%"> <p class="artiest-name"> Ankit Tiwari </p></li>
+	<li style="height: 100%;width: 15%"> <p class="artiest-name"> Udit Narayan </p></li>
+	<li style="height: 100%;width: 15%"> <p class="artiest-name"> Shreya Ghosal </p></li>
+
+</div>
+
+<!-- Music Area Section -->
+
+
+<div id="music" >
+
+<ul class="horizontal-list">
+
+	<li id="type"> </li>
+	<li id="music_area1"> 
+		<p class="artiest-name">Love</p></li>
+	<li id="music_area2"><p  class="artiest-name" >Chill</p></li>
+	<li id="music_area3"><p class="artiest-name">Workout</p></li>
+	<li id="music_area4"><p  class="artiest-name">Rock</p></li>
+	<li id="music_area5"><p class="artiest-name" >Road Trip</p></li>
+
+
+
+</ul>
+</div>
+
+<!-- Music Type Section -->
+
+<div id="music-type">
+	<ul class="horizontal-list">
+
+	<li id="music_genre1">
+      <p style="font-size: 30px;font-weight: bolder; text-align: center;color: white" > Party</p>
+	 </li>
+	<li id="music_genre2">
+		 <p style="font-size: 30px;font-weight: bolder; text-align: center;color: white"> Electronics</p>
+	</li>
+	<li id="music_genre3">
+		 <p style="font-size: 30px;font-weight: bolder; text-align: center;color: white"> Road Trip</p>
+	</li>
+</ul>
+</div>
+
+
+<!--Enlish Release  -->
+
+<div id="English">
+	<p class="title"> Latest English</p>
+	<ul class="horizontal-list">
+
+	<li id="song1">
+
+          <div id="song1_img"><img class="boder_img" src="https://i1.sndcdn.com/artworks-000145437931-n5w58g-t500x500.jpg"></div>
+         <p class="song-info"> Mirage </p>
+          	 </li>
+	<li id="song1">
+
+          <div id="song1_img"><img class="boder_img" src="https://i.scdn.co/image/09b326e48032874f5869e53a66187db5f4179a30"></div>
+         <p class="song-info"> Worry </p>
+     
+
+	 </li>
+
+	<li id="song1">
+
+          <div id="song1_img"><img class="boder_img" src="https://upload.wikimedia.org/wikipedia/en/3/35/Flume_-_Skin.png"></div>
+          <p class="song-info"> New </p>
+	 </li>
+
+
+
+	<li id="song1">
+
+          <div id="song1_img"><img class="boder_img" src="https://i1.sndcdn.com/artworks-000145437931-n5w58g-t500x500.jpg"></div>
+          <p class="song-info"> Mirage </p>
+        
+	 </li>
+
+	<li id="song1">
+
+          <div id="song1_img"><img class="boder_img"src="https://upload.wikimedia.org/wikipedia/en/3/35/Flume_-_Skin.png"></div>
+         <p class="song-info"> Worry </p>
+	 </li>
+
+	<li id="song1">
+
+          <div id="song1_img"><img class="boder_img" src="https://peopledotcom.files.wordpress.com/2019/10/katy-perry-2-2000.jpg"></div>
+          <p class="song-info"> Katty </p>
+          <!--p id="name"> hdslih</p>
+          <p id="date"> 25 aug 2019</p-->
+
+	 </li>
+</ul>
+</div>
+
+
+
+<!--Hindi Release -->
+<div id="hindi">
+	<p class="title" style="margin-top:90px"> Latest Hindi</p>
+	<ul class="horizontal-list">
+
+	<li id="song1">
+
+          <div id="song1_img">
+          	<img class="boder_img" src="https://assets.charmboard.com/images/w_1280,h_720/x_184,y_96,w_877,h_496,c_crop,f_auto,q_auto,e_sharpen/h_541/im/lc/611931/john-abraham-in-jitni-dafa-parmanu-the-story-of-pokhran-2018.jpg">
+          </div>
+       <p class="song-info">Jitni Dafa </p>
+	 </li>
+	<li id="song1">
+
+          <div id="song1_img"><img class="boder_img" src="https://c.ndtvimg.com/pt5oiml8_loveratri-youtube_625x300_30_August_18.jpg"></div>
+            <p class="song-info""> Tera Hua </p>
+
+
+	 </li>
+
+	<li id="song1">
+
+          <div id="song1_img"><img class="boder_img" src="https://www.hindustantimes.com/rf/image_size_960x540/HT/p2/2017/04/18/Pictures/latest-kapoor-girlfriend-shraddha-kapoor-chahunga-still_710f15dc-23fe-11e7-929a-64902ca55664.jpg"></div>
+                  <p class="song-info"> Phir Bhi </p>
+
+	 </li>
+
+
+
+	<li id="song1">
+
+          <div id="song1_img"><img class="boder_img" src="https://timesofindia.indiatimes.com/thumb/msid-71044192,width-800,height-600,resizemode-4/71044192.jpg"></div>
+                  <p class="song-info"> Pal </p>
+
+	 </li>
+
+	<li id="song1">
+
+          <div id="song1_img"><img class="boder_img" src="https://www.filmibeat.com/img/2018/03/baaghi1-1520519124.jpg"></div>
+                <p class="song-info"> O sathi </p>
+
+
+	 </li>
+
+	<li id="song1">
+
+          <div id="song1_img"><img class="boder_img" src="https://i.ytimg.com/vi/gExKe-6Nt8U/maxresdefault.jpg"></div>
+           <p class="song-info"> Tera Ban </p>
+
+          <!--p id="name"> hdslih</p>
+          <p id="date"> 25 aug 2019</p-->
+
+	 </li>
+</ul>
+</div>
+
+
+</div>
+
+
+<!-- Aside Section -->
+
+<aside class="ScrollStyle">
+
+
+
+<!--  Queue Aside Head --> 
+	<div id="head">
+    
+    <ul class="horizontal-list">
+      <li id="first_head">Queue</li>
+      <li >
+      	
+      	<select name="select" style=" -webkit-appearance: none;height: inherit;width: inherit;display: inline-block;background-color: #0C1027;border: none;color: #245A5D ">
+      		<option value="Queue"> queue</option>
+      		 <option value="Queue" >My playlist</option>
+      		  <option value="Queue" > Recently played</option>
+          </select>
+   
+
+      </li>
+
+ 
+    </ul>
+
+	 </div>
+
+
+	 <!--Song list -->
+    <div id="song_title">
+    
+    <ul class="horizontal-list">
+      <li id="sno">01</li>
+      <li id="simg"><img class="boder_img" src="https://i1.sndcdn.com/artworks-000145437931-n5w58g-t500x500.jpg"></li>
+      <li id="sname">
+      	
+      	<p class="title"> Mirag</p>
+      	<p  style="margin-top: -18px; color: white"> Else</p>
+      </li>
+        <li id="heart"><i class="far fa-heart " style="color: #8EA3AE"></i></li>
+
+    </ul>
+    </div>
+
+      <div id="song_title">
+    
+    <ul class="horizontal-list">
+      <li id="sno">02</li>
+      <li id="simg"><img class="boder_img" src="https://i.scdn.co/image/09b326e48032874f5869e53a66187db5f4179a30"></li>
+      <li id="sname">
+      		<p class="title">Worry</p>
+      	<p  style="margin-top: -18px; color: white">Rosiew</p>
+      </li>
+     <li id="heart"><i class="far fa-heart " style="color: #8EA3AE"></i></li>
+
+    </ul>
+    </div>
+
+
+      <div id="song_title">
+    
+    <ul class="horizontal-list">
+      <li id="sno"><i class="fas fa-play" style="margin-left: 5px; color:#21B7D8;text-align: center;"></i></li>
+      <li id="simg"><img class="boder_img" src="https://upload.wikimedia.org/wikipedia/en/3/35/Flume_-_Skin.png"></li>
+      <li id="sname">
+      	<p class="title">New</p>
+      	<p  style="margin-top: -18px; color: white">Floi</p>
+      </li>
+       <li id="heart"><i class="far fa-heart " style="color: #8EA3AE"></i></li>
+
+    </ul>
+    </div>
+
+
+ <div id="song_title">
+    
+    <ul class="horizontal-list">
+      <li id="sno">04</li>
+      <li id="simg"><img class="boder_img" src="https://i1.sndcdn.com/artworks-000145437931-n5w58g-t500x500.jpg"></li>
+      <li id="sname">
+       <p class="title">Mirag</p>
+      	<p  style="margin-top: -18px; color: white">Floi</p>
+      </li>
+ <li id="heart"><i class="far fa-heart " style="color: #8EA3AE"></i></li>
+
+    </ul>
+    </div>
+
+ <div id="song_title">
+    
+    <ul class="horizontal-list">
+      <li id="sno">05</li>
+      <li id="simg"><img class="boder_img" src="https://upload.wikimedia.org/wikipedia/en/3/35/Flume_-_Skin.png"></li>
+      <li id="sname">
+      	<p class="title">New..</p>
+      	<p  style="margin-top: -18px; color: white">Floi</p>
+      </li>
+       <li id="heart"><i class="far fa-heart " style="color: #8EA3AE"></i></li>
+
+    </ul>
+    </div>
+
+
+    <div id="song_title">
+    
+    <ul class="horizontal-list">
+      <li id="sno">06</li>
+      <li id="simg"><img class="boder_img" src="https://i.scdn.co/image/09b326e48032874f5869e53a66187db5f4179a30"></li>
+      <li id="sname">
+      	<p class="title">Worry</p>
+      	<p  style="margin-top: -18px; color: white">Roise</p>
+      </li>
+       <li id="heart"><i class="far fa-heart " style="color: #8EA3AE"></i></li>
+
+    </ul>
+    </div>
+
+
+ <div id="song_title">
+    
+    <ul class="horizontal-list">
+      <li id="sno">07</li>
+      <li id="simg"><img class="boder_img" src="https://upload.wikimedia.org/wikipedia/en/3/35/Flume_-_Skin.png"></li>
+      <li id="sname">
+      	<p class="title">New..</p>
+      	<p  style="margin-top: -18px; color: white">Floi</p>
+      </li>
+       <li id="heart"><i class="far fa-heart " style="color: #8EA3AE"></i></li>
+
+    </ul>
+    </div>
+ <div id="song_title">
+    
+    <ul class="horizontal-list">
+      <li id="sno">08</li>
+      <li id="simg"><img class="boder_img" src="https://i1.sndcdn.com/artworks-000145437931-n5w58g-t500x500.jpg"></li>
+      <li id="sname">
+      	<p class="title">Mirag</p>
+      	<p  style="margin-top: -18px; color: white">Else</p>
+      </li>
+       <li id="heart"><i class="far fa-heart " style="color: #8EA3AE"></i></li>
+
+    </ul>
+    </div>
+ <div id="song_title">
+    
+    <ul class="horizontal-list">
+      <li id="sno">09</li>
+      <li id="simg"><img class="boder_img" src="https://upload.wikimedia.org/wikipedia/en/3/35/Flume_-_Skin.png"></li>
+      <li id="sname">
+      	<p class="title">New..</p>
+      	<p  style="margin-top: -18px; color: white">Floi</p>
+      </li>
+     <li id="heart"><i class="far fa-heart" style="color: #8EA3AE"></i></li>
+
+    </ul>
+    </div>
+    <div id="song_title">
+    
+    <ul class="horizontal-list">
+      <li id="sno">10</li>
+      <li id="simg"><img class="boder_img" src="https://s.mxmcdn.net/images-storage/albums4/0/0/5/6/1/3/37316500_350_350.jpg"></li>
+      <li id="sname">
+      	<p class="title">Mirag</p>
+      	<p  style="margin-top: -18px; color:white ">Else</p>
+      </li>
+        <li id="heart"><i class="far fa-heart" style="color: #8EA3AE" ></i></li>
+
+    </ul>
+    </div>
+
+
+
+
+	</aside>
+
+<div id="play-progress">hwwsq;odfiqeg'o </div>
+
+
+<div class="container">
+<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+ 
+<div id="jp_container_1" class="jp-audio">
+  <div class="jp-type-single">
+ 
+    <div class="jp-title">
+      <ul>
+       <li>Enjoy Best HollyWood Songs</li>
+      </ul>
+    </div>
+ 
+    <div class="jp-gui jp-interface">
+ 
+        <ul class="jp-controls">
+          <li><a href="javascript:;" class="jp-play" tabindex="1">&#61515;</a></li>
+          <li><a href="javascript:;" class="jp-pause" tabindex="1">&#61516;</a></li>
+          <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">&#61480;</a></li>
+          <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">&#61478;</a></li>
+        </ul>
+ 
+        <div class="jp-progress">
+          <div class="jp-seek-bar">
+            <div class="jp-play-bar"></div>
+          </div>
+        </div>
+ 
+        <div class="jp-time-holder">
+          <div class="jp-current-time"></div>
+        </div>
+ 
+        <div class="jp-volume-bar">
+          <div class="jp-volume-bar-value"></div>
+        </div>
+        <div class="jp-no-solution">
+      <span>Update Required</span>
+      To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+    </div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>

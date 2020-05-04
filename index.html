@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shashi Bhushan</title>
+	<link rel="stylesheet" type="text/css" href="position.css">
+	<link rel="stylesheet" type="text/css" href="shashi.css">
+	<script src="https://kit.fontawesome.com/525d3a0fd1.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+<style>
+  @font-face {
+    font-family: "FontAwesome";
+    src: url("fonts/fontawesome-webfont.eot");
+    src: url("fonts/fontawesome-webfont.eot?#iefix") format("eot"), 
+       url("fonts/fontawesome-webfont.woff") format("woff"), 
+       url("fonts/fontawesome-webfont.ttf") format("truetype"), 
+       url("fonts/fontawesome-webfont.svg#FontAwesome") format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+.jp-title {
+    font-size: 12px;
+    text-align: center;
+    color: #999;
+}
+
+.jp-title ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.jp-gui {
+  position: relative;
+  background: #f34927;
+  background: -moz-linear-gradient(top,  #f34927 0%, #dd3311 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f34927), color-stop(100%,#dd3311));
+  background: -webkit-linear-gradient(top,  #f34927 0%,#dd3311 100%);
+  background: -o-linear-gradient(top,  #f34927 0%,#dd3311 100%);
+  background: -ms-linear-gradient(top,  #f34927 0%,#dd3311 100%);
+  background: linear-gradient(to bottom,  #f34927 0%,#dd3311 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f34927', endColorstr='#dd3311',GradientType=0 );
+  -webkit-box-shadow:  0px 1px 1px 0px rgba(0, 0, 0, .1);    
+    box-shadow:  0px 1px 1px 0px rgba(0, 0, 0, .1);
+    border-radius: 3px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.jp-jplayer, .jp-audio {
+    width: 420px;
+    margin: 50px auto;
+}
+
+.jp-controls {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: "FontAwesome";
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+}
+
+.jp-controls li {
+    display: inline;
+}
+
+.jp-controls a {
+    color: #fff;
+}
+
+.jp-play,.jp-pause {
+    width: 60px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+    line-height: 43px;
+    border-right: 1px solid #d22f0f;
+}
+
+.jp-controls .jp-play:hover,.jp-controls .jp-pause:hover {
+    background-color: #de3918;
+}
+
+.jp-mute,.jp-unmute {
+    position: absolute;
+    right: 55px;
+    top: 0;
+    width: 20px;
+    height: 40px;
+    display: inline-block;
+    line-height: 46px;
+}
+
+.jp-mute {
+    text-align: left;
+}
+
+.jp-volume-bar {
+    position: absolute;
+    right: 10px;
+    top: 17px;
+    width: 45px;
+    height: 8px;
+    border-radius: 20px 20px 20px 20px;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1) inset;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1) inset;
+    background-color: #992E18;
+    overflow: hidden;
+}
+
+.jp-volume-bar-value {
+    background-color: #fff;
+    height: 8px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.jp-progress {
+    background-color: #992E18;
+    border-radius: 20px 20px 20px 20px;
+    overflow: hidden;
+    position: absolute;
+    right: 133px;
+    top: 15px;
+    width: 210px;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2) inset;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2) inset;
+}
+
+.jp-play-bar {
+    height: 12px;
+    background-color: #fff;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.jp-time-holder {
+    color: #FFF;
+    font-size: 12px;
+    line-height: 14px;
+    position: absolute;
+    right: 90px;
+    top: 14px;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+}
+
+</style>
+
+
+<script>
+  $(document).ready(function(){
+      $("#jquery_jplayer_1").jPlayer({
+        ready: function () {
+          $(this).jPlayer("setMedia", {
+            mp3: "audio/joker-lai-lai-lai.mp3",
+            mp3: "audio/joker-kina-get-you-the-moon.mp3",
+            oga: "audio/file_example_OOG_5MG.ogg"
+          });
+        },
+        swfPath: "/js",
+        supplied: "mp3,oga"
+      });
+    });
+</script>
+
+</head>
+<body>
+<!--Header Section-->
+<div id="div1">
+	<ul class="horizontal-list">
+		<li id="header-logo"></li>
+		<li id="header-title" style="text-align: center;">
+			<p class="title" style="margin: 0px">Shashi</p>
+			<p class="title" style="margin: 0px">Studio</p>
+		</li>
+		<li id="Favorites">
+			<p class="title">Favorites</p>
+		</li>
+		<li id="header-search">
+			<i class="fas fa-search" style="margin-left:5px;color: white;font-size: 17px ;display:inline-block;"></i>
+		    <p style="display: inline-block ;color:#848484; font-size: 15px; margin-left:10px;margin-right:135px"> Search</p>
+		   <div id="mic-icon">
+		   	<i class="fas fa-microphone boder_img" style="font-size: 17px;margin-left: 20px;color:#848484 ">
+		   		
+		   	</i>
+		   </div>
+		</li>
+		<li id="notification"><i class="far fa-bell boder_img" style="color: white; font-size: 30px;margin-top: 15px">
+			
+		</i>
+	</li>
+		<li id="profile-logo"></li> 
+	</ul>
+</div>
+
+
+
+ <!-- Main Section Starts Here -->
+
+
+
+
+  <div id="coldplay-section">
+
+ 	<!--Cold play Header section -->
+
+   <div id="main-content1">
+   	<!--Cold play Image section -->
+   	
+   	<div id="main-img"><img class="boder_img" src="https://www.rockandpop.cl/wp-content/uploads/2018/11/1481536340_152263_1481536622_noticia_normal-400x360.jpg"></div>
+   	<!--Cold Play Details Section -->
+   	<div id="info">
+   		
+   		<ul class="horizontal-list">
+   		<li><p style="font-size: 30px;font-weight: bolder;color: white;margin-right: 200px;">Cold Play</p></li>
+   		<li><p style="color:  #B3B3B3;font-size:15px">851 Followers</p></li>
+   		</ul>
+   		<p style="color:  #B3B3B3;font-size:20px;margin-top: -25px;">British Band</p>
+   		<p style="color:  #B3B3B3">Coldplay are a British music band that has enjoyed continious success since their inception in 1996 through their intelligent and soulful songs. The band members are Chris Martin (lead vocals), Jonny Buckland (lead guitar), Guy Berryman (bass guitar) and will  Champion (drums).</p>
+   		<ul class="horizontal-list">
+          <li><button style="height: 30px;width: 100px;color: white;font-size: 20px;text-align: center;border: 1px solid #0C1027;background: linear-gradient(to right,blue,#B444DA)">Play</button></li>
+          <li><p style="margin-left: 110px;color:  #B3B3B3;font-size: 20px">Follow</p></li>
+        </ul>
+   		<p style="margin-top: -15px;color:  #B3B3B3;font-size: 15px">265 Tracks |125 Albums</p>
+   	</div>
+   </div>
+
+
+      <!--  Cold Play Songs List Section -->
+    <div id="main-content2">
+    	
+       <div id="grid">
+       <ul class="horizontal-list">
+       <li style="color: #B3B3B3;margin-left:5px;vertical-align: top;font-size: 15px;margin-top: 20px">01</li>
+       <li id="grid-img"><img class="boder_img"src="https://i1.sndcdn.com/artworks-000145437931-n5w58g-t500x500.jpg"></li>
+       <li style="color:white;vertical-align: top;font-size: 15px;margin-top: 20px">Mirage</li>
+       <li style="vertical-align: top;margin-left: 560px"><i class="fas fa-heart" style="font-size: 10px;color:#B3B3B3;margin-top: 20px"></i></li>
+       <li style="vertical-align: top;margin-left:10px"><i class="fas fa-plus" style="font-size: 10px;color: #B3B3B3;margin-top: 20px"></i></li>
+       <li></li>
+    </ul>
+    </div>
+    <div id="grid">
+    	<ul class="horizontal-list">
+    		<li style="color: #B3B3B3;margin-left:5px;vertical-align: top;font-size: 15px;margin-top: 20px"><i class="fas fa-play"></i></li>   <li id="grid-img"><img class="boder_img"src="https://i1.sndcdn.com/artworks-000145437931-n5w58g-t500x500.jpg"></li>
+    		<li style="color: white;vertical-align: top;font-size: 15px;margin-top: 20px">Mirage</li>
+    		<li style="vertical-align: top;margin-left: 560px"><i class="fas fa-heart" style="font-size: 10px;color: #B3B3B3;margin-top: 20px"></i></li>
+    		<li style="vertical-align: top;margin-left:10px"><i class="fas fa-plus" style="font-size: 10px;color:  #B3B3B3;margin-top: 20px"></i></li>
+    		<li></li>
+        </ul>
+    </div>
+    	<div id="grid">
+    			<ul class="horizontal-list">
+    			<li style="color: #B3B3B3;margin-left:5px;vertical-align: top;font-size: 15px;margin-top: 20px"><i class="fas fa-play"></i></li>    	
+    			<li id="grid-img"><img class="boder_img"src="https://i1.sndcdn.com/artworks-000145437931-n5w58g-t500x500.jpg"></li>
+
+    		    <li style="color: white;vertical-align: top;font-size: 15px;margin-top: 20px">Mirage</li>
+    		    <li style="vertical-align: top;margin-left: 560px"><i class="fas fa-heart" style="font-size: 10px;color: #B3B3B3;margin-top: 20px"></i></li>
+    		    <li style="vertical-align: top;margin-left:10px"><i class="fas fa-plus" style="font-size: 10px;color:  #B3B3B3;margin-top: 20px"></i></li>
+    		     <li></li>
+                </ul>
+    		</div>
+
+
+    	<div id="grid">
+    			<ul class="horizontal-list">
+    			<li style="color: #B3B3B3;margin-left:5px;vertical-align: top;font-size: 15px;margin-top: 20px">03</li>    	
+    			<li id="grid-img"><img class="boder_img"src="https://i1.sndcdn.com/artworks-000145437931-n5w58g-t500x500.jpg"></li>
+
+    		    <li style="color: white;vertical-align: top;font-size: 15px;margin-top: 20px">Mirage</li>
+    		    <li style="color:white;vertical-align: top;margin-left: 560px"><i class="fas fa-heart" style="font-size: 10px;color: #B3B3B3;margin-top: 20px"></i></li>
+    		    <li style="vertical-align: top;margin-left:10px"><i class="fas fa-plus" style="font-size: 10px;color: #B3B3B3;margin-top: 20px"></i></li>
+    		     <li></li>
+                </ul>
+    	  </div>
+    	<div id="grid">
+
+
+    			<ul class="horizontal-list">
+    			<li style="color: #B3B3B3;margin-left:5px;vertical-align: top;font-size: 15px;margin-top: 20px">04</li>    	
+    			<li id="grid-img"><img class="boder_img"src="https://i1.sndcdn.com/artworks-000145437931-n5w58g-t500x500.jpg"></li>
+
+    		    <li style="color: white;vertical-align: top;font-size: 15px;margin-top: 20px">Mirage</li>
+    		    <li style="vertical-align: top;margin-left: 560px"><i class="fas fa-heart" style="font-size: 10px;color: #B3B3B3;margin-top: 20px"></i></li>
+    		    <li style="vertical-align: top;margin-left:10px"><i class="fas fa-plus" style="font-size: 10px;color:  #B3B3B3;margin-top: 20px"></i></li>
+    		     <li></li>
+                </ul>
+    		</div>
+
+
+    		<div id="grid">
+    			<ul class="horizontal-list">
+    			<li style="color: #B3B3B3;margin-left:5px;vertical-align: top;font-size: 15px;margin-top: 20px">05</li>    	
+    			<li id="grid-img"><img class="boder_img"src="https://i1.sndcdn.com/artworks-000145437931-n5w58g-t500x500.jpg"></li>
+
+    		    <li style="color:white;vertical-align: top;font-size: 15px;margin-top: 20px">Mirage</li>
+    		    <li style="vertical-align: top;margin-left: 560px"><i class="fas fa-heart" style="font-size: 10px;color:  #B3B3B3;margin-top: 20px"></i></li>
+    		    <li style="vertical-align: top;margin-left:10px"><i class="fas fa-plus" style="font-size: 10px;color: white;margin-top: 20px"></i></li>
+    		     <li></li>
+                </ul>
+    		</div>
+
+        <div id="grid">
+    			<ul class="horizontal-list">
+    			<li style="color: #B3B3B3;margin-left:5px;vertical-align: top;font-size: 15px;margin-top: 20px">06</li>    	
+    			<li id="grid-img"><img class="boder_img"src="https://i1.sndcdn.com/artworks-000145437931-n5w58g-t500x500.jpg"></li>
+
+    		    <li style="color: white;vertical-align: top;font-size: 15px;margin-top: 20px">Mirage</li>
+    		    <li style="vertical-align: top;margin-left: 560px"><i class="fas fa-heart" style="font-size: 10px;color:  #B3B3B3;margin-top: 20px"></i></li>
+    		    <li style="vertical-align: top;margin-left:10px"><i class="fas fa-plus" style="font-size: 10px;color:  #B3B3B3;margin-top: 20px"></i></li>
+    		     <li></li>
+                </ul>
+    		</div>
+    		<div id="grid">
+    			<ul class="horizontal-list">
+    			<li style="color: #B3B3B3;margin-left:5px;vertical-align: top;font-size: 15px;margin-top: 20px">07</li>    	
+    			<li id="grid-img"><img class="boder_img"src="https://i1.sndcdn.com/artworks-000145437931-n5w58g-t500x500.jpg"></li>
+
+    		    <li style="color: white;vertical-align: top;font-size: 15px;margin-top: 20px">Mirage</li>
+    		    <li style="vertical-align: top;margin-left: 560px"><i class="fas fa-heart" style="font-size: 10px;color: #B3B3B3;margin-top: 20px"></i></li>
+    		    <li style="vertical-align: top;margin-left:10px"><i class="fas fa-plus" style="font-size: 10px;color: #B3B3B3;margin-top: 20px"></i></li>
+    		     <li></li>
+                </ul>
+    		</div>
+
+
+    	<div id="grid">
+    			<ul class="horizontal-list">
+    			<li style="color: #B3B3B3;margin-left:5px;vertical-align: top;font-size: 15px;margin-top: 20px">08</li>    	
+    			<li id="grid-img"><img class="boder_img"src="https://i1.sndcdn.com/artworks-000145437931-n5w58g-t500x500.jpg"></li>
+
+    		    <li style="color: white;vertical-align: top;font-size: 15px;margin-top: 20px">Mirage</li>
+    		    <li style="vertical-align: top;margin-left: 560px"><i class="fas fa-heart" style="font-size: 10px;color:  #B3B3B3;margin-top: 20px"></i></li>
+    		    <li style="vertical-align: top;margin-left:10px"><i class="fas fa-plus" style="font-size: 10px;color:  #B3B3B3;margin-top: 20px"></i></li>
+    		     <li></li>
+                </ul>
+    		</div>
+
+
+    		<div id="grid">
+    			<ul class="horizontal-list">
+    			<li style="color: #B3B3B3;margin-left:5px;vertical-align: top;font-size: 15px;margin-top: 20px">09</li>    	
+    			<li id="grid-img"><img class="boder_img"src="https://i1.sndcdn.com/artworks-000145437931-n5w58g-t500x500.jpg"></li>
+
+    		    <li style="color: white;vertical-align: top;font-size: 15px;margin-top: 20px">Mirage</li>
+    		    <li style="vertical-align: top;margin-left: 560px"><i class="fas fa-heart" style="font-size: 10px;color:  #B3B3B3;margin-top: 20px"></i></li>
+    		    <li style="vertical-align: top;margin-left:10px"><i class="fas fa-plus" style="font-size: 10px;color:  #B3B3B3;margin-top: 20px"></i></li>
+    		     <li></li>
+                </ul>
+    		</div>
+
+    		
+    		<div id="grid">
+    			<ul class="horizontal-list">
+    			<li style="color: #B3B3B3;margin-left:5px;vertical-align: top;font-size: 15px;margin-top: 20px">10</li>    	
+    			<li id="grid-img"><img class="boder_img"src="https://i1.sndcdn.com/artworks-000145437931-n5w58g-t500x500.jpg"></li>
+
+    		    <li style="color: white;vertical-align: top;font-size: 15px;margin-top: 20px">Mirage</li>
+    		    <li style="vertical-align: top;margin-left: 560px"><i class="fas fa-heart" style="font-size: 10px;color:  #B3B3B3;margin-top: 20px"></i></li>
+    		    <li style="vertical-align: top;margin-left:10px"><i class="fas fa-plus" style="font-size: 10px;color:  #B3B3B3;margin-top: 20px"></i></li>
+    		     <li></li>
+                </ul>
+    		</div>
+
+    </div>
+ </div>
+  <!--  Aside Section Starts Here -->
+
+ <aside> 
+<p style="color: white;font-size: 16px;font-weight: bolder;display: inline-block;margin-right: 80px"> Similar Arties</p>
+<p style="color:  #B3B3B3;font-size: 10px;display: inline-block;"> View All </p>
+
+
+
+
+<!--Simialr Arties section -->
+<div id="similar">
+
+
+<!-- Arties 1 -->
+
+	<div id="ar1">
+		<ul class="horizontal-list">
+			<li style="height: 90px;width:80px;	border: 1px solid #0C1027;
+"><img class="boder_img" src="https://i1.sndcdn.com/artworks-000145437931-n5w58g-t500x500.jpg"></li>
+			<li style="vertical-align: top">
+				<div style="color: white;font-size: 20px;margin-top: 20px">Mirage</div>
+				<div style="color: white;font-size: 10px;margin-top: 6px"> Lois</div>
+			</li>
+			<li style="vertical-align: top;margin-left: 40px">
+				<div style="height: 59%;width: 100%;color:  #B3B3B3;margin-top: 20px"><i class="fas fa-ellipsis-h"></i></div>
+				<div style="color:  #B3B3B3;font-size: 10px;margin-top: 0px">4.44</div>
+			</li>
+
+		</ul>
+	</div>
+
+
+<!--Arties 2-->
+
+
+	<div id="ar1">
+		<ul class="horizontal-list">
+	<li style="height: 90px;width:80px;	border: 1px solid #0C1027;
+"><img class="boder_img" src="https://i1.sndcdn.com/artworks-000145437931-n5w58g-t500x500.jpg"></li>
+		<li style="vertical-align: top">
+				<div style="color: white;font-size: 20px;margin-top: 20px">Mirage</div>
+				<div style="color: white;font-size: 10px;margin-top: 6px"> Lois</div>
+			</li>
+			<li style="vertical-align: top;margin-left: 40px">
+				<div style="height: 59%;width: 100%;color:  #B3B3B3;margin-top: 20px"><i class="fas fa-ellipsis-h"></i></div>
+				<div style="color:  #B3B3B3;font-size: 10px;margin-top: 0px">4.44</div>
+			</li>
+
+		</ul>
+	</div>
+<!-- Arties 3 section -->
+	<div id="ar1">
+		<ul class="horizontal-list">
+	<li style="height: 90px;width:80px;	border: 1px solid #0C1027;
+"><img class="boder_img" src="https://i1.sndcdn.com/artworks-000145437931-n5w58g-t500x500.jpg"></li>
+			<li style="vertical-align: top">
+				<div style="color: white;font-size: 20px;margin-top: 20px">Mirage</div>
+				<div style="color:  white;font-size: 10px;margin-top: 6px"> Lois</div>
+			</li>
+			<li style="vertical-align: top;margin-left: 40px">
+				<div style="height: 59%;width: 100%;color:  #B3B3B3;margin-top: 20px"><i class="fas fa-ellipsis-h"></i></div>
+				<div style="color:  #B3B3B3;font-size: 10px;margin-top: 0px">4.44</div>
+			</li>
+
+		</ul>
+	</div>
+</div>
+<p style="color: white;font-size: 16px;font-weight: bolder;display: inline-block;margin-right: 80px">Recently Played</p>
+<p style="color:  #B3B3B3;font-size: 10px;display: inline-block;"> View All </p>
+
+
+<!-- Recently Played Section Starts Here -->
+<div id="recently">
+	
+	<!-- Songs Played List -->
+	<div id="song-played">
+		<ul class="horizontal-list">
+			<li style="color:  #B3B3B3;vertical-align: top;font-size: 15px;margin-top: 10px">01</li>    	
+    			<li id="grid-img"><img class="boder_img"src="https://i1.sndcdn.com/artworks-000145437931-n5w58g-t500x500.jpg"></li>
+
+    		    <li style="color: white;vertical-align: top;font-size: 15px;margin-top: 20px">Mirage</li>
+    		    <li style="vertical-align: top;margin-left: 60px"><i class="fas fa-heart" style="font-size: 10px;color:  #B3B3B3;margin-top: 20px"></i></li>
+
+		</ul>
+	</div>
+    	<!-- Song 2 section -->
+
+
+	<div id="song-played">
+		<ul class="horizontal-list">
+			<li style="color:  #B3B3B3;vertical-align: top;font-size: 15px;margin-top: 10px">02</li>    	
+    			<li id="grid-img"><img class="boder_img"src="https://i1.sndcdn.com/artworks-000145437931-n5w58g-t500x500.jpg"></li>
+
+    		    <li style="color: white;vertical-align: top;font-size: 15px;margin-top: 20px">Mirage</li>
+    		    <li style="vertical-align: top;margin-left: 60px"><i class="fas fa-heart" style="font-size: 10px;color:  #B3B3B3;margin-top: 20px"></i></li>
+
+		</ul>
+	</div>
+
+<!--Song 3 section -->
+
+
+	<div id="song-played">
+		<ul class="horizontal-list">
+		<li style="color:  #B3B3B3;vertical-align: top;font-size: 15px;margin-top: 10px">03</li>    	
+    			<li id="grid-img"><img class="boder_img"src="https://i1.sndcdn.com/artworks-000145437931-n5w58g-t500x500.jpg"></li>
+
+    		    <li style="color: white;vertical-align: top;font-size: 15px;margin-top: 20px">Mirage</li>
+    		    <li style="vertical-align: top;margin-left: 60px"><i class="fas fa-heart" style="font-size: 10px;color:  #B3B3B3;margin-top: 20px"></i></li>
+
+		</ul>
+	</div>
+	<div id="song-played">
+		<ul class="horizontal-list">
+		<li style="color:  #B3B3B3;vertical-align: top;font-size: 15px;margin-top: 10px">04</li>    	
+    			<li id="grid-img"><img class="boder_img"src="https://i1.sndcdn.com/artworks-000145437931-n5w58g-t500x500.jpg"></li>
+
+    		    <li style="color: white;vertical-align: top;font-size: 15px;margin-top: 20px">Mirage</li>
+    		    <li style="vertical-align: top;margin-left: 60px"><i class="fas fa-heart" style="font-size: 10px;color:  #B3B3B3;margin-top: 20px"></i></li>
+		</ul>
+	</div>
+
+
+
+	<div id="song-played">
+		<ul class="horizontal-list">
+			<li style="color:  #B3B3B3;vertical-align: top;font-size: 15px;margin-top: 10px">05</li>    	
+    			<li id="grid-img"><img class="boder_img"src="https://i1.sndcdn.com/artworks-000145437931-n5w58g-t500x500.jpg"></li>
+
+    		    <li style="color: white;vertical-align: top;font-size: 15px;margin-top: 20px">Mirage</li>
+    		    <li style="vertical-align: top;margin-left: 60px"><i class="fas fa-heart" style="font-size: 10px;color:  #B3B3B3;margin-top: 20px"></i></li>
+		</ul>
+	</div>
+
+
+	<div id="song-played">
+		<ul class="horizontal-list">
+			<li style="color: white;vertical-align: top;font-size: 15px;margin-top: 10px">06</li>    	
+    			<li id="grid-img"><img class="boder_img"src="https://i1.sndcdn.com/artworks-000145437931-n5w58g-t500x500.jpg"></li>
+
+    		    <li style="color:  #B3B3B3;vertical-align: top;font-size: 15px;margin-top: 20px">Mirage</li>
+    		    <li style="vertical-align: top;margin-left: 60px"><i class="fas fa-heart" style="font-size: 10px;color:  #B3B3B3;margin-top: 20px"></i></li>
+		</ul>
+	</div>
+</div>
+</aside> 
+
+
+
+<div class="container">
+<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+ 
+<div id="jp_container_1" class="jp-audio">
+  <div class="jp-type-single">
+ 
+    <div class="jp-title">
+      <ul>
+       <li>Enjoy Best HollyWood Songs</li>
+      </ul>
+    </div>
+ 
+    <div class="jp-gui jp-interface">
+ 
+        <ul class="jp-controls">
+          <li><a href="javascript:;" class="jp-play" tabindex="1">&#61515;</a></li>
+          <li><a href="javascript:;" class="jp-pause" tabindex="1">&#61516;</a></li>
+          <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">&#61480;</a></li>
+          <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">&#61478;</a></li>
+        </ul>
+ 
+        <div class="jp-progress">
+          <div class="jp-seek-bar">
+            <div class="jp-play-bar"></div>
+          </div>
+        </div>
+ 
+        <div class="jp-time-holder">
+          <div class="jp-current-time"></div>
+        </div>
+ 
+        <div class="jp-volume-bar">
+          <div class="jp-volume-bar-value"></div>
+        </div>
+        <div class="jp-no-solution">
+      <span>Update Required</span>
+      To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+    </div>
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>

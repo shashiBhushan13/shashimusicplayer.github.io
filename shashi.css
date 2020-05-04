@@ -1,0 +1,78 @@
+#coldplay-section{
+
+	margin-top:40px;
+	margin-left: 20px;
+	height: 60rem;
+	width: 60%;
+	display: inline-block;
+}
+/*cold play herder */
+#main-content1{
+	height: 300px;
+	width: 100%;
+	margin-bottom: 20px;
+	border: 1px solid #0C1027;
+	background-color: #141B41;
+}
+#main-img{
+	height: 100%;
+	width: 40%;
+	display: inline-block;
+	margin-right: 10px;
+	border: 1px solid #0C1027;
+}
+#info{
+	height: 100%;
+	width: 58%;
+	display: inline-block;
+	vertical-align: top;
+}
+/*cold play songs Hedaer */ 
+#main-content2{
+	height: 500px;
+	width: 100%;
+	margin-bottom: 20px;
+}
+#grid{
+	height: 50px;
+	width: 100%;
+	margin-bottom: 5px;
+	vertical-align: top;
+	background-color: #1A1E33;
+}
+#grid-img
+{
+	height: 50px;
+	width:60px;
+	border: 1px solid #0C1027;
+}
+/*aside section */
+
+aside{
+	margin-top: 40px;
+	height: 50rem;
+	width: 30%;
+}
+#similar
+{
+	height: 300px;
+	width: 100%;
+	margin-bottom: 30px;
+}
+#recently
+{
+	height: 500px;
+	width: 100%;
+}
+#ar1
+{
+	height: 90px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+#song-played
+{
+	height: 50px;
+	width: 100%;
+	margin-bottom: 10px;
+}
